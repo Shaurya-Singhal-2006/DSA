@@ -1,0 +1,21 @@
+class Solution {
+    public boolean canAliceWin(int[] nums) {
+        int sum_single = 0;
+        int sum_double = 0;
+
+        for(int val : nums){
+            if(val < 10){
+                sum_single += val;
+            }
+            else{
+                sum_double += val;
+            }
+        }
+        if(sum_single == sum_double){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+}
